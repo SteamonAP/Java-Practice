@@ -1,0 +1,102 @@
+✅ Rule 1: Always use nextLine()
+
+Never mix:
+
+nextInt()
+nextLine()
+
+Unless you know buffer issues.
+
+For string problems:
+
+String input = sc.nextLine();
+
+Always.
+
+✅ Rule 2: Clean Input Early
+
+If question includes symbols:
+
+input = input.replaceAll("[^a-zA-Z0-9]", "");
+
+Or if case insensitive:
+
+input = input.toLowerCase();
+
+Normalize FIRST.
+
+✅ Rule 3: Use StringBuilder for Modifications
+
+Never do:
+
+str = str + ch;
+
+Use:
+
+StringBuilder sb = new StringBuilder();
+
+Faster and cleaner.
+
+✅ Rule 4: Character Frequency Template
+int[] freq = new int[256];
+
+for(char c : str.toCharArray()){
+    freq[c]++;
+}
+
+Works for ASCII.
+
+✅ Rule 5: Word Splitting
+
+For word-based questions:
+
+String[] words = str.trim().split("\\s+");
+
+Handles multiple spaces.
+
+🔥 Example: Universal String Input Template
+Scanner sc = new Scanner(System.in);
+
+String input = sc.nextLine().trim();
+
+input = input.replaceAll("[\\[\\]{}()]", "");
+
+String[] words = input.split("[\\s,]+");
+
+Now works for:
+
+hello world
+hello,world
+[hello world]
+{hello, world}
+
+
+
+✅ 8️⃣ String Question Template
+
+For almost ALL string problems:
+
+Scanner sc = new Scanner(System.in);
+
+String input = sc.nextLine().trim();
+
+// Optional normalization
+// input = input.toLowerCase();
+// input = input.replaceAll("[^a-zA-Z0-9]", "");
+
+StringBuilder sb = new StringBuilder();
+
+// Work on input
+
+System.out.print(sb.toString());
+
+
+
+
+
+Strategy for String Problems
+🔹 If character based → use toCharArray()
+🔹 If frequency → use int[256]
+🔹 If word based → use split("\\s+")
+🔹 If heavy modification → use StringBuilder
+🔹 If palindrome/anagram → normalize first

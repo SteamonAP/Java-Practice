@@ -2,7 +2,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
+import java.util.*;
 
 public class arrayList {
 
@@ -71,19 +72,30 @@ public class arrayList {
     // }
     // }
 
-    // IF Scanner class not working in Placements... Use Buffered Reader
-
+    // IF Scanner class not working in Placements... Use Buffered R
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String word = br.readLine();
 
+   
         System.out.println(word);
 
         int num1 = Integer.parseInt(br.readLine());
 
         double num2 = Double.parseDouble(br.readLine());
     }
+
+
+    public int[] createTargetArray(int[] nums, int[] index) {
+        ArrayList<Integer> list = new ArrayList<>();
+        List<List<String>> items;
+       String s;
+       list.toArray().to
+       int[][] image = new int[3][3];
+
+     }
+
 
 }

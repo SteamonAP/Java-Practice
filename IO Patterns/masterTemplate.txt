@@ -1,0 +1,188 @@
+✅ 1️⃣ n + array + k (Space Separated)
+Input:
+7
+1 2 3 4 5 6 7
+3
+Template:
+Scanner sc = new Scanner(System.in);
+
+int n = Integer.parseInt(sc.nextLine().trim());
+
+int[] arr = new int[n];
+
+String[] vals = sc.nextLine().trim().split("\\s+");
+for(int i = 0; i < n; i++){
+    arr[i] = Integer.parseInt(vals[i]);
+}
+
+int k = Integer.parseInt(sc.nextLine().trim());
+✅ 2️⃣ n + array + k (Space OR Comma)
+
+Handles:
+
+1 2 3 4
+1,2,3,4
+1, 2, 3, 4
+Scanner sc = new Scanner(System.in);
+
+int n = Integer.parseInt(sc.nextLine().trim());
+
+int[] arr = new int[n];
+
+String line = sc.nextLine().trim();
+String[] vals = line.split("[\\s,]+");
+
+for(int i = 0; i < n; i++){
+    arr[i] = Integer.parseInt(vals[i]);
+}
+
+int k = Integer.parseInt(sc.nextLine().trim());
+✅ 3️⃣ Handles Brackets [] {} ()
+
+Input examples:
+
+[1,2,3,4]
+{1 2 3 4}
+(1, 2, 3, 4)
+Scanner sc = new Scanner(System.in);
+
+String line = sc.nextLine().trim();
+line = line.replaceAll("[\\[\\]{}()]", "");
+
+String[] vals = line.split("[\\s,]+");
+
+int n = vals.length;
+int[] arr = new int[n];
+
+for(int i = 0; i < n; i++){
+    arr[i] = Integer.parseInt(vals[i]);
+}
+✅ 4️⃣ Without n (Dynamic Length)
+
+Input:
+
+1 2 3 4 5
+3
+Scanner sc = new Scanner(System.in);
+
+String line = sc.nextLine().trim();
+String[] vals = line.split("[\\s,]+");
+
+int n = vals.length;
+int[] arr = new int[n];
+
+for(int i = 0; i < n; i++){
+    arr[i] = Integer.parseInt(vals[i]);
+}
+
+int k = Integer.parseInt(sc.nextLine().trim());
+✅ 5️⃣ Multi-Line Broken Array Input
+
+Input:
+
+7
+1 2 3
+4 5
+6 7
+3
+Scanner sc = new Scanner(System.in);
+
+int n = Integer.parseInt(sc.nextLine().trim());
+
+List<Integer> list = new ArrayList<>();
+
+while(list.size() < n){
+    String line = sc.nextLine().trim();
+    String[] vals = line.split("[\\s,]+");
+
+    for(String v : vals){
+        if(!v.isEmpty())
+            list.add(Integer.parseInt(v));
+    }
+}
+
+int[] arr = new int[n];
+for(int i = 0; i < n; i++){
+    arr[i] = list.get(i);
+}
+
+int k = Integer.parseInt(sc.nextLine().trim());
+✅ 6️⃣ First Line Has Multiple Variables (n k target etc)
+
+Input:
+
+7 3
+1 2 3 4 5 6 7
+Scanner sc = new Scanner(System.in);
+
+String[] first = sc.nextLine().trim().split("\\s+");
+
+int n = Integer.parseInt(first[0]);
+int k = Integer.parseInt(first[1]);
+
+int[] arr = new int[n];
+
+String[] vals = sc.nextLine().trim().split("[\\s,]+");
+
+for(int i = 0; i < n; i++){
+    arr[i] = Integer.parseInt(vals[i]);
+}
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // 🔥 STEP 1: Read FULL input (all lines)
+        StringBuilder input = new StringBuilder();
+
+        while(sc.hasNextLine()){
+            String line = sc.nextLine().trim();
+            if(line.isEmpty()) break; // stop if empty line
+            input.append(line).append(" ");
+        }
+
+        // 🔥 STEP 2: Extract ONLY numbers
+        String[] nums = input.toString().split("[^0-9]+");
+
+        // 🔥 STEP 3: Convert to integer list
+        List<Integer> values = new ArrayList<>();
+
+        for(String s : nums){
+            if(!s.isEmpty()){
+                values.add(Integer.parseInt(s));
+            }
+        }
+
+        // 🔥 DEBUG (optional)
+        // System.out.println(values);
+
+        // =============================
+        // 👉 NOW YOU CONTROL EVERYTHING
+        // =============================
+
+        // Example usage:
+
+        // Case 1: first value = n
+        int n = values.get(0);
+
+        int[] arr = new int[n];
+        for(int i = 0; i < n; i++){
+            arr[i] = values.get(i + 1);
+        }
+
+        // Example extra variable (if exists)
+        int k = (values.size() > n + 1) ? values.get(n + 1) : 0;
+
+        // 👉 print to verify
+        System.out.println("n = " + n);
+        System.out.println("Array = " + Arrays.toString(arr));
+        System.out.println("k = " + k);
+    }
+}
+
+
+Hey, Im currently practicing few question for my upcoming Coding assesment for placements like TCS NQT and all , where the worry some part is the INput taking and output. Over all I have drafter few my parsing techniques which im practicing with few questions in  Java , i would like you to take a look at these and assist me accordingly based on the questions which I will provide you in future and my input output methods

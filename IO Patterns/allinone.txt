@@ -1,0 +1,82 @@
+import java.util.*;
+
+public class Main {
+
+    static void reverse(int[] arr, int s, int e) {
+        while (s < e) {
+            int temp = arr[s];
+            arr[s] = arr[e];
+            arr[e] = temp;
+            s++;
+            e--;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        List<Integer> numbers = new ArrayList<>();
+        int n = 0;
+        int k = 0;
+
+        String firstLine = sc.nextLine().trim();
+
+        // Case 1: First line is only a number (n given)
+        if (firstLine.matches("\\d+")) {
+
+            n = Integer.parseInt(firstLine);
+
+            // Collect array elements (can be multi-line)
+            while (numbers.size() < n) {
+                String line = sc.nextLine().trim();
+                line = line.replaceAll("[\\[\\]{}()]", "");
+                String[] parts = line.split("[\\s,]+");
+
+                for (String p : parts) {
+                    if (!p.isEmpty())
+                        numbers.add(Integer.parseInt(p));
+                }
+            }
+
+            k = Integer.parseInt(sc.nextLine().trim());
+        }
+
+        // Case 2: n NOT given
+        else {
+
+            String line = firstLine;
+            line = line.replaceAll("[\\[\\]{}()]", "");
+            String[] parts = line.split("[\\s,]+");
+
+            for (String p : parts) {
+                if (!p.isEmpty())
+                    numbers.add(Integer.parseInt(p));
+            }
+
+            n = numbers.size();
+            k = Integer.parseInt(sc.nextLine().trim());
+        }
+
+        if (n == 0) return;
+
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = numbers.get(i);
+        }
+
+        // Safe normalization
+        k = ((k % n) + n) % n;
+
+        // RIGHT ROTATION (change order for left)
+        reverse(arr, 0, n - 1);
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, n - 1);
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        sc.close();
+    }
+}

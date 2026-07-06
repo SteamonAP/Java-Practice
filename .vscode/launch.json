@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Enums",
+            "request": "launch",
+            "mainClass": "Collections.Enums",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Collections.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Cloning.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "ExceptionHandling.Demo",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "ExceptionHandling.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "LambdaFunctions",
+            "request": "launch",
+            "mainClass": "LambdaFunctions",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Comparing.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "CustomGEnArrayList",
+            "request": "launch",
+            "mainClass": "CustomGEnArrayList",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "CustomArrayList",
+            "request": "launch",
+            "mainClass": "CustomArrayList",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Interfaces.Nested.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Interfaces.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AbstractDemo.Main",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

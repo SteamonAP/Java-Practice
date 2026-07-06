@@ -1,0 +1,36 @@
+Scanner sc = new Scanner(System.in);
+
+String firstLine = sc.nextLine().trim();
+
+// If first line is a single number → it's n
+if(firstLine.matches("\\d+")){
+
+    int n = Integer.parseInt(firstLine);
+
+    String arrLine = sc.nextLine().trim();
+    arrLine = arrLine.replaceAll("[\\[\\]{}()]", "");
+    String[] vals = arrLine.split("[\\s,]+");
+
+    int[] arr = new int[n];
+    for(int i = 0; i < n; i++){
+        arr[i] = Integer.parseInt(vals[i]);
+    }
+
+    int k = Integer.parseInt(sc.nextLine().trim());
+
+}
+else{
+    // n not given, first line is array
+    String arrLine = firstLine;
+    arrLine = arrLine.replaceAll("[\\[\\]{}()]", "");
+    String[] vals = arrLine.split("[\\s,]+");
+
+    int n = vals.length;
+    int[] arr = new int[n];
+
+    for(int i = 0; i < n; i++){
+        arr[i] = Integer.parseInt(vals[i]);
+    }
+
+    int k = Integer.parseInt(sc.nextLine().trim());
+}
