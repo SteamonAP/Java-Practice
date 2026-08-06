@@ -6,6 +6,104 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RatMaze",
+            "request": "launch",
+            "mainClass": "RatMaze",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "SubsetSums",
+            "request": "launch",
+            "mainClass": "SubsetSums",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "NQueens",
+            "request": "launch",
+            "mainClass": "NQueens",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "AllPathsMaze",
+            "request": "launch",
+            "mainClass": "AllPathsMaze",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Maze",
+            "request": "launch",
+            "mainClass": "Maze",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Dice",
+            "request": "launch",
+            "mainClass": "Dice",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "PhonePad",
+            "request": "launch",
+            "mainClass": "PhonePad",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Permutation",
+            "request": "launch",
+            "mainClass": "Permutation",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "SubSet",
+            "request": "launch",
+            "mainClass": "SubSet",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Ascii",
+            "request": "launch",
+            "mainClass": "Ascii",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "SubSeq",
+            "request": "launch",
+            "mainClass": "SubSeq",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "Stream",
+            "request": "launch",
+            "mainClass": "Stream",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "RotatedBinarySearch",
+            "request": "launch",
+            "mainClass": "RotatedBinarySearch",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
+            "name": "ReverseNum",
+            "request": "launch",
+            "mainClass": "ReverseNum",
+            "projectName": "Java Programs_1c57c8d4"
+        },
+        {
+            "type": "java",
             "name": "Enums",
             "request": "launch",
             "mainClass": "Collections.Enums",

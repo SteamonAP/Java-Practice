@@ -37,6 +37,8 @@ public class PlayerMain {
                 System.out.println(p.getPlayerId());
         }
 
+        sc.close();
+
     }
 
     public static int findPlayerWithLowestRuns(Player[] players, String playerType) {
